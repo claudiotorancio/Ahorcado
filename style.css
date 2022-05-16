@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    background: #E5E5E5;
+    font-family: "inter"sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    text-decoration: none;
+}
+
+header{
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+main{
+    margin: 300px;
+    display: grid;
+    
+}
+
+
+.botonIniciar{
+    margin: 0 auto;
+    font-size: 18px;
+    display: block;
+    width: 317px;
+    height: 114px;
+    background: #0A3871;
+    border-radius: 18px;
+    color: white;
+}
+
+.botonAgregar{
+    
+    margin: 0 auto;
+    margin-top: 20px;
+    
+    font-size: 18px;
+    display: block;
+    width: 280px;
+    height: 67px;
+    background: #D8DFE8;
+    border-radius: 24px;
+   
+}
