@@ -2,30 +2,34 @@
 <html lang="esp">
 <head>
     <meta charset="UTF-8">
-    <title>Ahorcado</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <title>Chsllrngr 2 | Oracle  Next Education</title>
+    <link rel="stylesheet" href="./style.css"/>
+    <meta content="viewport" content="width=device-width"/>
+    
     
 </head>
 <body>
-    <header>
-        <img src="./imagenes/Group 3.png">
-    </header>
-
-    <main>
-                
-        <input type="button" class="botonIniciar" value="iniciarJuego">
-        <form>        
-            <a href="./agregarPalabra.html">
-            <input  type="button" class="botonAgregar" value="Agregar nueva palabra" >
-            </a>
-        </form>
-            
-        
-        
-    </main>
-    
+    <div class="hombre-ahorcado">
+        <img id="hombre" alt="hombre ahorcado" src="./imagenes/01.png"/>
+    </div>
+    <div class="adivinado">
+        <span class="letra adivinada">A</span>
+        <span class="letra adivinada">L</span>
+        <span class="letra adivinada"></span>
+        <span class="letra adivinada"></span>
+        <span class="letra adivinada">A</span>
+    </div>
+    <div class="errado">
+        <span class="letra errada">B</span>
+        <span class="letra errada">J</span>
+        <span class="letra errada">K</span>
+        <span class="letra errada">C</span>
+    </div>
+    <form class="botones" action="javascript:void(0)">
+        <input type="button" class= "btn-azul" value="Nuevo Juego"/>
+        <input type="button" value="Desistir"/>
+    </form>
 </body>
+ 
+<script src="./app.js"></script>
 </html>
