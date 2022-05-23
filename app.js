@@ -147,11 +147,6 @@
     function alertaPerdido(palabra) {
         alert("Sorry, perdiste... la palabra era: " + palabra)
     }
-
     nuevoJuego()
-    
-
-    
-
     
 }())
