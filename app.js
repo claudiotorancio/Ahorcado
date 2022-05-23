@@ -1,10 +1,17 @@
 ;(function(){
-    var juego = {
-        palabra: "ALURA",
-        estado: 7,
-        adivinado: ["A", "L"],
-        errado: ["B", "J", "K", "C"],
-    }
+
+    var palabras = [
+        "ALURA",
+        "PERRO",
+        "AUTO",
+        "LOGICA",
+        "CASA"
+    ]
+    // Variable para almacenarla configuracion actual
+    var juego = null
+    //Para ver si se ha enviado algun alerta
+    var finalizado = false
+       
 
     var $html = {
         hombre: document.getElementById("hombre"),
@@ -73,7 +80,7 @@
             let ganado = true
             // Debemos ver si llegamos al estado ganado
             for (let l of palabra){
-                if (adivinado.indexOf(letra) < 0 && l != letra){
+                if (adivinado.indexOf(l) < 0 && l != letra){
                     ganado = false
                     juego.previo = juego.estado
                     break
@@ -97,12 +104,54 @@
     window.onkeypress = function adivinarLetra(e) {
         var letra = e.key
         letra = letra.toUpperCase()
-        if(/[^A-ZÑ]/.test(letra)) {
+        if (/[^A-ZÑ]/.test(letra)) {
             return
         }
         adivinar(juego, letra)
+        var estado = juego.estado
+        if (estado === 8 && !finalizado) {
+           setTimeout(alertaGanado, 0)
+           finalizado = true          
+        } else if (estado === 1 && !finalizado) {
+            let palabra = juego.palabra
+            let fn = alertaPerdido.bind(undefined, palabra)
+            setTimeout(fn, 0)  
+            finalizado = true        
+        }
+
         dibujar(juego)
     }
 
-    dibujar(juego)
+    window.nuevoJuego = function nuevoJuego(){
+        var palabra = palabraAleatoria()
+        juego = {}
+        juego.palabra = palabra
+        juego.estado = 7
+        juego.adivinado = []
+        juego.errado = []
+        finalizado = false
+        dibujar(juego)
+        console.log(juego)
+
+    }
+
+    function palabraAleatoria(){
+        var index = ~~(Math.random() * palabras.length)
+        return palabras[index]
+    }
+
+    function alertaGanado() {
+        alert("Felicidades, Ganaste")
+    }
+
+    function alertaPerdido(palabra) {
+        alert("Sorry, perdiste... la palabra era: " + palabra)
+    }
+
+    nuevoJuego()
+    
+
+    
+
+    
 }())
