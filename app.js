@@ -1,13 +1,20 @@
-;(function(){
 
+;(function(){
     var palabras = [
         "ALURA",
         "PERRO",
         "AUTO",
         "LOGICA",
-        "CASA"
+        "CASA",
+        
     ]
-    // Variable para almacenarla configuracion actual
+    // ingresar la nueva palabra a la lista
+    
+palabras.push(JSON.parse(localStorage.getItem("lista")))
+
+console.log(palabras)
+
+    // Variable para almacenar la configuracion actual
     var juego = null
     //Para ver si se ha enviado algun alerta
     var finalizado = false
@@ -17,7 +24,10 @@
         hombre: document.getElementById("hombre"),
         adivinado: document.querySelector(".adivinado"),
         errado: document.querySelector(".errado"),
+       
     }
+
+        
     function dibujar(juego) {
 
         //actualizar la imagen del hombre
@@ -147,6 +157,16 @@
     function alertaPerdido(palabra) {
         alert("Sorry, perdiste... la palabra era: " + palabra)
     }
-    nuevoJuego()
     
+
+    
+    nuevoJuego()
+
 }())
+    
+
+
+
+
+
+
