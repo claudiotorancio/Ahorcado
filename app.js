@@ -111,7 +111,7 @@ console.log(palabras)
         }
     }
 
-    window.onkeypress = function adivinarLetra(e) {
+    window.onkeydown = function adivinarLetra(e) {
         var letra = e.key
         letra = letra.toUpperCase()
         if (/[^A-ZÑ]/.test(letra)) {
