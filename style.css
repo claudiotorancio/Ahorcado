@@ -1,0 +1,112 @@
+body {
+    background-color: #f3f5fcE6 ;
+    margin: 0px;
+}
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+html {
+  font-size: 16px;
+}
+
+.logo {
+  margin: 2rem;
+}
+
+#hombre {
+  max-width: 100%;
+  max-height: 100%;
+  display: inline-block;
+  }
+  
+
+  .hombre-ahorcado {
+    width: 100vw;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    max-height: 16.75rem;
+     
+  }
+
+  .adivinado{
+    text-align: center;
+    color: #002462;
+    font-size: 1.8rem;
+    
+  }
+
+  .letra {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    
+  }
+
+  .adivinada {
+       
+    width: 4.5rem;
+    height: 4.5rem;
+    border-bottom: solid 1px #002462;
+    margin-left: 0.4rem ;
+    line-height: 4.5rem;
+    
+  }
+
+  .errado {
+    text-align: center;
+    margin-top: 1rem;
+    color: #383f46;
+    }
+
+  .errada {
+    margin-left: 1rem;
+  }
+
+
+  [type=button] {
+    width: 15rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: solid 1px #0a3871;
+    color: #0a3871;
+    cursor: pointer;
+    background: inherit;
+    margin-top: 1rem;
+  }
+
+  .btn-azul {
+    background-color: #0a3871;
+    color: #fff;
+    border-color: black;
+   
+
+  }
+#tlfn {
+
+ width: 400px;
+ opacity: 0;
+}
+  
+
+  .botones {
+    margin-top: 1rem;
+    text-align: center;
+    
+    
+  }
+
+  #entrada {
+   border-radius: 1rem; 
+   width: 15rem;
+   height: 5rem;
+   text-align: center;
+  }
+
+  @media (min-width:320px) and (max-width:768px) {
+  }
+
+  
+
