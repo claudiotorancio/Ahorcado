@@ -84,11 +84,13 @@ html {
    
 
   }
-#tlfn {
-
- width: 400px;
- opacity: 0;
+  .teclado{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
 }
+
   
 
   .botones {
