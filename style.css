@@ -84,18 +84,33 @@ html {
    
 
   }
-#tlfn {
-text-align: center;
- width: 400px;
- /*opacity: 0;*/
+#keyboard {
+  width: 100vw;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  max-height: 16.75rem;
+
+} 
+
+.btn-keyboard {
+    
+    font-size: 20px;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 50px;
+    padding: 5px 5px;
+    margin: 5px;
+    border: none;
+    background-color: #0a3871;
+    color: #fff;
+   
 }
-  
 
   .botones {
     margin-top: 1rem;
     text-align: center;
-    
-    
   }
 
   #entrada {
@@ -105,8 +120,6 @@ text-align: center;
    text-align: center;
   }
 
-  @media (min-width:320px) and (max-width:768px) {
-  }
-
+  
   
 
