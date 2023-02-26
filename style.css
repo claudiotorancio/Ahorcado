@@ -84,7 +84,7 @@ html {
    
 
   }
-#keyboard {
+.keyboard {
   width: 100vw;
   text-align: center;
   margin-top: 2rem;
@@ -93,7 +93,7 @@ html {
 
 } 
 
-.btn-keyboard {
+.teclado{
     
     font-size: 20px;
     text-align: center;
