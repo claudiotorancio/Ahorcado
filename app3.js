@@ -6,11 +6,16 @@
         "COTORRA",
         "RATON"
     ];
-
-    var storedWords = JSON.parse(localStorage.getItem("lista"));
-    if (storedWords !== null) {
-        palabras.push(storedWords);
+    
+    var nuevaPalabra = JSON.parse(localStorage.getItem("lista"));
+    if (nuevaPalabra !== null) {
+       
+        nuevaPalabra = nuevaPalabra.toUpperCase() 
+        palabras.push(nuevaPalabra);
+        localStorage.removeItem('lista') 
     }
+   
+
    //variable para almacenar configuracion actual
     var juego = null
     // variable para ver si hay alerta
@@ -168,15 +173,8 @@
             dibujar(juego)
            
         }
-
-       
-            
-       
-
-       
-
-       
         window.nuevoJuego = function nuevoJuego(){
+            
             var palabra = palabraAleatoria()
             juego = {}
             juego.palabra = palabra
@@ -191,7 +189,7 @@
 
         }
 
-        function palabraAleatoria() {
+        function palabraAleatoria() {     
             var index = ~~(Math.random() * palabras.length)
             return palabras[index]
         }
@@ -204,8 +202,7 @@
             alert('Lo siento perdiste.. la palabra era: ' + palabra)
            
         }
-       
         nuevoJuego()
-        
-       
+console.log(palabras)
+console.log(juego.palabra)
 }())
