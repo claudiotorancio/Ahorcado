@@ -9,10 +9,9 @@
     
     var nuevaPalabra = JSON.parse(localStorage.getItem("lista"));
     if (nuevaPalabra !== null) {
-       
         nuevaPalabra = nuevaPalabra.toUpperCase() 
         palabras.push(nuevaPalabra);
-        localStorage.removeItem('lista') 
+       localStorage.removeItem('lista')
     }
    
 
@@ -170,11 +169,13 @@
                     }
                 }
             }
+            
             dibujar(juego)
            
         }
         window.nuevoJuego = function nuevoJuego(){
-            
+
+          
             var palabra = palabraAleatoria()
             juego = {}
             juego.palabra = palabra
@@ -184,14 +185,22 @@
             
             finalizado = false
             juego.keyboard = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ"
-          
+            
             dibujar(juego)
-
+           localStorage.removeItem('lista')
         }
 
-        function palabraAleatoria() {     
+        
+
+        function palabraAleatoria() {   
+            
+            if(nuevaPalabra != null){
+               return nuevaPalabra
+                
+            } 
             var index = ~~(Math.random() * palabras.length)
             return palabras[index]
+            
         }
 
         function alertaGanado() {
@@ -202,7 +211,9 @@
             alert('Lo siento perdiste.. la palabra era: ' + palabra)
            
         }
+        localStorage.removeItem('lista')
         nuevoJuego()
+        
 console.log(palabras)
 console.log(juego.palabra)
 }())
